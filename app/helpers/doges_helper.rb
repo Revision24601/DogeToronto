@@ -1,0 +1,2 @@
+module DogesHelper
+end

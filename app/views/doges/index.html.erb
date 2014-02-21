@@ -1,0 +1,52 @@
+<h1>Listing doges</h1>
+
+<form action="/s" id="search_form" class="custom show-search-options position-left form-inline">
+  <div class="input-wrapper">
+    <input type="text" class="location input-large input-contrast" autocomplete="off" id="location" name="location" placeholder="Where do you want to go?">
+    <p id="enter_location_error_message" class="bad" style="display:none;">
+      Please set location
+    </p>
+  </div>
+
+
+
+  <button type="submit" class="btn btn-primary btn-large btn-contrast" id="submit_location">
+    Search
+  </button>
+</form>
+
+<text value="soup"></text>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @doges.each do |doge| %>
+      <tr>
+        <td><%= link_to 'Show', doge %></td>
+        <td><%= link_to 'Edit', edit_doge_path(doge) %></td>
+        <td><%= link_to 'Destroy', doge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+<%= link_to 'New Doge', new_doge_path %>
+
+
+<p class="emergency_text">
+OUR WEBAPP IS CRASHING AND BURNING PLS HALP.
+
+I LEAVE IT UPTO YOU DAVID.
+</p>
+
